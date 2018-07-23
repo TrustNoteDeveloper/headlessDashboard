@@ -21,7 +21,7 @@ def getTTT():
     if request.method == 'POST':
         address = request.form['address']
         msg = rpc.payTTT(address,500)
-        return msg
+        return render_template('getTTT_success.html')
     return render_template('getTTT.html')
 
 @app.route('/api/pay',methods=['POST'])
