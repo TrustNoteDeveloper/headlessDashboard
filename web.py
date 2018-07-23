@@ -14,7 +14,7 @@ def Response_headers(content):
 @app.route('/')
 def home():
     #return 'Hello, World!'
-    return = render_template('index.html')
+    return render_template('index.html')
 
 
 
