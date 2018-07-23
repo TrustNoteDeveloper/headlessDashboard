@@ -16,7 +16,13 @@ def home():
     #return 'Hello, World!'
     return render_template('index.html')
 
-
+@app.route('/getTTT',methods=['GET','POST'])
+def getTTT():
+    if request.method == 'POST':
+        address = request.form['address']
+        msg = rpc.payTTT(address,500)
+        return msg
+    return render_template('getTTT.html')
 
 @app.route('/api/pay',methods=['POST'])
 def pay():
