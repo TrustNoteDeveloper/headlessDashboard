@@ -9,6 +9,15 @@ def Response_headers(content):
     resp.headers['Access-Control-Allow-Origin'] = '*'
     return resp
 
+
+
+@app.route('/')
+def home():
+    #return 'Hello, World!'
+    return = render_template('index.html')
+
+
+
 @app.route('/api/pay',methods=['POST'])
 def pay():
     if request.method == 'POST':
