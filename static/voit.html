@@ -1,0 +1,178 @@
+<html>
+<head>
+  <title>Voting System base on TrustNote</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/static/css/jquery.jsonview.css" rel="stylesheet" />
+  <style media="screen">
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .form-group{
+    text-align: center;
+  }
+  #cp{
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  canvas{
+    width: 100%;
+  }
+  .qrcode{
+    margin: 10px auto;
+    width: 80px;
+    height: 80px;
+  }
+  #address{
+    text-align: center;
+  }
+  </style>
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/jquery.qrcode.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/jquery.jsonview.min.js"></script>
+</head>
+<body>
+  <div id="cp">
+    <h2><div href="/">Voting System base on TrustNote<div></h2>
+      <div class="panel panel-default">
+        <div class="panel-heading" id="name">
+          投票
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+
+            <div>李旺</div>
+            <div class="amount" id="KBSXMJZFX3MKBOCY62FV2BYBGCFKOUQH">0</div>
+            <div class="qrcode" id="qrcode_0" address="KBSXMJZFX3MKBOCY62FV2BYBGCFKOUQH"></div>
+            <div>KBSXMJZFX3MKBOCY62FV2BYBGCFKOUQH</div>
+            <div class="progress">
+              <div id="progress_0" class="progress-bar KBSXMJZFX3MKBOCY62FV2BYBGCFKOUQH" role="progressbar" style="min-width: 0em; width:0%;">
+                0.00%
+              </div>
+            </div>
+
+            <div>耿晓婵<div><div class="amount" id="2IBF7TF2XSDSRLSWYYZHFQ4XKPO43INP">0</div>
+              <div class="qrcode" id="qrcode_1" address="2IBF7TF2XSDSRLSWYYZHFQ4XKPO43INP"></div><div>2IBF7TF2XSDSRLSWYYZHFQ4XKPO43INP</div>
+              <div class="progress">
+                <div id="progress_1" class="progress-bar 2IBF7TF2XSDSRLSWYYZHFQ4XKPO43INP" role="progressbar" style="min-width: 0em; width:0%;">
+                  0.00%
+                </div>
+              </div>
+              <div>王俊智<div><div class="amount" id="LL6KHW27TBDQXU7MF5KZZPFFXKLDZQXI">0</div>
+                <div class="qrcode" id="qrcode_2" address="LL6KHW27TBDQXU7MF5KZZPFFXKLDZQXI"></div><div>LL6KHW27TBDQXU7MF5KZZPFFXKLDZQXI</div>
+                <div class="progress">
+                  <div id="progress_2" class="progress-bar LL6KHW27TBDQXU7MF5KZZPFFXKLDZQXI" role="progressbar" style="min-width: 0em; width:0%;">
+                    0.00%
+                  </div>
+                </div>
+                <div>大白<div><div class="amount" id="6QIWU5TWPGAX3UV2GXQG3K6UQFKLJ2RJ">0</div>
+                  <div class="qrcode" id="qrcode_3" address="6QIWU5TWPGAX3UV2GXQG3K6UQFKLJ2RJ"></div><div>6QIWU5TWPGAX3UV2GXQG3K6UQFKLJ2RJ</div>
+                  <div class="progress">
+                    <div id="progress_3" class="progress-bar 6QIWU5TWPGAX3UV2GXQG3K6UQFKLJ2RJ" role="progressbar" style="min-width: 0em; width:0%;">
+                      0.00%
+                    </div>
+                  </div>
+                  <div>王宇<div><div class="amount" id="U3NBSVQJUFMJB5R6OYPMCQCENTHK5RR3">0</div>
+                    <div class="qrcode" id="qrcode_4" address="U3NBSVQJUFMJB5R6OYPMCQCENTHK5RR3"></div><div>U3NBSVQJUFMJB5R6OYPMCQCENTHK5RR3</div>
+                    <div class="progress">
+                      <div id="progress_4" class="progress-bar U3NBSVQJUFMJB5R6OYPMCQCENTHK5RR3" role="progressbar" style="min-width: 0em; width:0%;">
+                        0.00%
+                      </div>
+                    </div>
+                    <div>文博<div><div class="amount" id="5QRRPXXQARIZSV7ZYBHI6ZPQBKSWKHH4">0</div>
+                      <div class="qrcode" id="qrcode_5" address="5QRRPXXQARIZSV7ZYBHI6ZPQBKSWKHH4"></div><div>5QRRPXXQARIZSV7ZYBHI6ZPQBKSWKHH4</div>
+                      <div class="progress">
+                        <div id="progress_5" class="progress-bar 5QRRPXXQARIZSV7ZYBHI6ZPQBKSWKHH4" role="progressbar" style="min-width: 0em; width:0%;">
+                          0.00%
+                        </div>
+                      </div>
+                      <div>熊梦园<div><div class="amount" id="DYFSJYA6FP53OGFGRZKCBI6TNLZ6LYNP">0</div>
+                        <div class="qrcode" id="qrcode_6" address="DYFSJYA6FP53OGFGRZKCBI6TNLZ6LYNP"></div><div>DYFSJYA6FP53OGFGRZKCBI6TNLZ6LYNP</div>
+                        <div class="progress">
+                          <div id="progress_6" class="progress-bar DYFSJYA6FP53OGFGRZKCBI6TNLZ6LYNP" role="progressbar" style="min-width: 0em; width:0%;">
+                            0.00%
+                          </div>
+                        </div>
+                        <div>snow<div><div class="amount" id="DUFQXUTUJBXJQ6PS3ZJUPJDZ7RRFAO7F">0</div>
+                          <div class="qrcode" id="qrcode_7" address="DUFQXUTUJBXJQ6PS3ZJUPJDZ7RRFAO7F"></div><div>DUFQXUTUJBXJQ6PS3ZJUPJDZ7RRFAO7F</div>
+                          <div class="progress">
+                            <div id="progress_7" class="progress-bar DUFQXUTUJBXJQ6PS3ZJUPJDZ7RRFAO7F" role="progressbar" style="min-width: 0em; width:0%;">
+                              0.00%
+                            </div>
+                          </div>
+                          <div>战国<div><div class="amount" id="K75H4OIHZZA43R5UBT3NPNRSVYT2G666">0</div>
+                            <div class="qrcode" id="qrcode_8" address="K75H4OIHZZA43R5UBT3NPNRSVYT2G666"></div><div>K75H4OIHZZA43R5UBT3NPNRSVYT2G666</div>
+                            <div class="progress">
+                              <div id="progress_8" class="progress-bar K75H4OIHZZA43R5UBT3NPNRSVYT2G666" role="progressbar" style="min-width: 0em; width:0%;">
+                                0.00%
+                              </div>
+                            </div>
+                            <div>林群<div><div class="amount" id="TMX2KPZBJ23746Q5SE7BZ5QMC3TP7UXQ">0</div>
+                              <div class="qrcode" id="qrcode_9" address="TMX2KPZBJ23746Q5SE7BZ5QMC3TP7UXQ"></div><div>TMX2KPZBJ23746Q5SE7BZ5QMC3TP7UXQ</div>
+                              <div class="progress">
+                                <div id="progress_9" class="progress-bar TMX2KPZBJ23746Q5SE7BZ5QMC3TP7UXQ" role="progressbar" style="min-width: 0em; width:0%;">0.00%</div>
+                              </div>
+                            </div>
+
+
+                            
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <script type="text/javascript">
+
+
+                    $('.qrcode').each( function( index, val ) {
+                      var address=$(val).attr("address");
+                      $(val).qrcode("TTT:"+address);
+                    });
+
+
+
+
+                    function get_amount(){
+                      $('.amount').each( function( index, val ) {
+                        var id=$(val).attr("id");
+                        $.getJSON("/api/mainnet/balance/"+id,function(json){
+                          $("#"+id).text(json);
+                        });
+                      });
+
+
+                      all_amount=0;
+                      $('.amount').each( function( index, val ) {
+                        var id=$(val).attr("id");
+                        var amount = $("#"+id).text();
+                        all_amount+=parseInt(amount);
+                      });
+
+                      $('.amount').each( function( index, val ) {
+                        var id=$(val).attr("id");
+                        var amount = $("#"+id).text();
+                        amount = parseInt(amount);
+                        var progress=0;
+                        if(amount>0){
+                          progress = amount/all_amount*100;
+                        }
+                        progress = progress.toFixed(2);
+                        console.log("progress",progress,id)
+                        $("."+id).css("width",progress+"%");
+                        $("."+id).text(progress+"%");
+                      });
+
+
+                    }
+
+                    setInterval(function(){
+                      get_amount();
+                    },1000)
+                    </script>
+                    <!-- Modal -->
+                  </body>
+                  </html>

@@ -2,7 +2,7 @@
 from flask import Flask, jsonify, render_template, request
 from flask import make_response,Response
 app = Flask(__name__)
-import rpc,json
+import rpc,json,info
 
 def Response_headers(content):
     resp = Response(content)
@@ -16,10 +16,17 @@ def home():
     #return 'Hello, World!'
     return render_template('index.html')
 
+
+
 @app.route('/diy_address')
 def diy_address():
     #return 'Hello, World!'
     return render_template('diy_address.html')
+
+@app.route('/random_address')
+def random_address():
+    #return 'Hello, World!'
+    return render_template('random_address.html')
 
 @app.route('/getTTT',methods=['GET','POST'])
 def getTTT():
@@ -80,6 +87,11 @@ def balance_of(address):
     content = rpc.get_balance_of(address)
     resp = Response_headers(content)
     return resp
+
+@app.route('/api/mainnet/balance/<string:address>',methods=['GET'])
+def get_balance_mainNET(address):
+    content = info.get_balance(address)
+    return jsonify(content)
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0',port=8080)
